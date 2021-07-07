@@ -40,6 +40,8 @@ OpenStreetMap tile index used by the HTTP `mod_tile` server.
 For an understanding of the index format and zoom levels, see:
 https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
 
+**NOTE** This command is standalone and can be executed on any machine with python installed.
+
 ### convert Usage
 
 ```shell
@@ -87,6 +89,9 @@ The `georender` command can be used to render all tiles in a geographic (lat/lon
 box. Under the hood we utilize the `render_list` utility from `mod_tile`, however this script
 does the conversion of lat/lon to tile index and then invokes `render_tile` for those
 limits at each zoom level.
+
+**NOTE** This needs  to be executed on the tile server itself where `mod_tile` is
+         installed and the tile cache directory is available.
 
 ### georender Usage
 

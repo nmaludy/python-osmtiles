@@ -135,7 +135,10 @@ if __name__ == '__main__':
     parser_georender = subparsers.add_parser('georender',
                                              help=('Render all OpenStreetMap tiles in a'
                                                    ' lat/lon bounding box using the "render_list"'
-                                                   ' utility from mod_tile.'))
+                                                   ' utility from mod_tile. NOTE: This needs'
+                                                   ' to be executed on the tile server itself'
+                                                   ' where mod_tile is installed and the tile'
+                                                   ' cache directory is available'))
     parser_georender.add_argument('-x', '--min-lon',
                                   help='start longitude in decimal degrees, WGS84',
                                   required=True,
